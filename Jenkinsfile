@@ -10,8 +10,7 @@ pipeline {
                  '''
              }
          }  
-             
-         stage('Upload to AWS') {
+            stage('Upload to AWS') {
               steps {
                   withAWS(region:'us-west-2',credentials:'test01') {
                   sh 'echo "Uploading content with AWS creds"'
